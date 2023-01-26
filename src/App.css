@@ -1,3 +1,9 @@
+@media only screen and (min-width: 1024px) {
+  .container header .header-nav-area #nav_container  {
+    display:flex;
+  }
+}
+
 /* google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
