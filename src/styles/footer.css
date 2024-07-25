@@ -1,52 +1,100 @@
-.footer{
-    padding: 60px 0px;
+.footer {
+    padding: 60px 15px; /* Added horizontal padding for smaller screens */
 }
 
-.footer__wrapper{
+.footer__wrapper {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
     justify-content: space-between;
-    column-gap: 2.5rem;
-}
-.footer__quick-links{
-    width: 20%;
-
+    gap: 2.5rem; /* Replaced column-gap with gap for better compatibility */
 }
 
-.footer__logo{
-    width: 40%;
+.footer__quick-links,
+.footer__logo {
+    flex: 1; /* Allow flex items to grow */
+    min-width: 200px; /* Ensure a minimum width */
 }
 
-.footer__logo h2{
+.footer__logo {
+    max-width: 40%; /* Maintain the width on larger screens */
+}
+
+.footer__quick-links {
+    max-width: 20%; /* Maintain the width on larger screens */
+}
+
+.footer__logo h2 {
     color: var(--primary-color);
 }
 
-.small_text{
-   font-size: 1rem;
-   margin-top: 30px; 
+.small__text {
+    font-size: 1rem;
+    margin-top: 30px;
 }
-.quick__links-title{
+
+.quick__links-title {
     font-size: 1.1rem;
     color: var(--primary-color);
-    font-weight:500 ;
-    margin-bottom: 30px;
-}  
-
-.quick__links{
-   list-style: none; 
-}
-.quick__link-item{
+    font-weight: 500;
     margin-bottom: 30px;
 }
 
-.quick__link-item a{
+.quick__links {
+    list-style: none;
+    padding: 0; /* Ensure no padding */
+}
+
+.quick__link-item {
+    margin-bottom: 15px; /* Reduced margin for better spacing */
+}
+
+.quick__link-item a {
     font-size: 0.9rem;
-    font-weight:300 ;
+    font-weight: 300;
     cursor: pointer;
+    text-decoration: none; /* Ensure no underline */
 }
-.quick__link-item a:hover{
+
+.quick__link-item a:hover {
     color: var(--primary-color);
 }
-.light-theme .quick__link-item a{
+
+.light-theme .quick__link-item a {
     font-weight: 500;
 }
 
+/* Responsive Styles */
+@media only screen and (max-width: 1024px) {
+    .footer__wrapper {
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .footer__logo {
+        max-width: 100%; /* Full width for logo on smaller screens */
+        margin-bottom: 1rem; /* Margin between sections */
+    }
+
+    .footer__quick-links {
+        max-width: 100%; /* Full width for quick links on smaller screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer__wrapper {
+        padding: 0; /* Remove padding for smaller screens */
+    }
+
+    .footer__quick-links {
+        width: 100%; /* Full width for quick links on smaller screens */
+        margin-bottom: 1rem; /* Margin between sections */
+    }
+
+    .quick__links-title {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .quick__link-item a {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
+}

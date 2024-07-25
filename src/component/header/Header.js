@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./header.css";
-import logo from "../../images/Techfix_Logo_Blue.png";
+import logo from "../../images/Techfix_Logo_Blue.png"; 
+import logolight from "../../images/Techfix_Logo_White.png"; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon, faSun, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons'; // Import the hamburger icon
 
 const nav_links = [
   {
@@ -28,8 +29,8 @@ const nav_links = [
 ];
 
 const Header = ({ theme, toggleTheme }) => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
   const headerRef = useRef(null);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const headerFunt = () => {
     if (
@@ -51,31 +52,35 @@ const Header = ({ theme, toggleTheme }) => {
     e.preventDefault();
     const targetAttr = e.target.getAttribute("href");
     const location = document.querySelector(targetAttr).offsetTop;
+
     window.scrollTo({
       left: 0,
       top: location - 80,
     });
   };
 
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className={`header ${theme}`}>
+    <header className={`header ${theme}`} ref={headerRef}>
       <div className='container'>
         <div className='nav__wrapper'>
-          <div className='logo'>
-            <img src={logo} alt="Logo" />
+          <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+            <FontAwesomeIcon icon={faBars} />
           </div>
-          {/* Mobile hamburger icon */}
-          <FontAwesomeIcon icon={faBars} className="hamburger-icon" onClick={toggleNav} />
-          {/* =========navigation =======*/}
-          <div className={`navigation ${isNavOpen ? 'open' : ''}`}>
+          <div className='logo'>
+            <img src={theme === "light-theme" ? logolight : logo} alt="Logo" />
+          </div>
+          {/* Mobile Menu */}
+          <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
             <ul className='menu'>
               {nav_links.map((item, index) => (
                 <li className='menu_item' key={index}>
-                  <a href={item.path} onClick={handleClick} className='menu__link'>
+                  <a href={item.path} 
+                  onClick={handleClick}
+                  className='menu__link'>
                     {item.display}
                   </a>
                 </li>
@@ -87,11 +92,11 @@ const Header = ({ theme, toggleTheme }) => {
             <span onClick={toggleTheme}>
               {theme === "light-theme" ? (
                 <span>
-                  <FontAwesomeIcon icon={faMoon} /> Dark Mode
+                  <i className='ri-moon-line'></i>Dark Mode
                 </span>
               ) : (
                 <span>
-                  <FontAwesomeIcon icon={faSun} /> Light Mode
+                  <i className='ri-sun-line'></i>Light Mode
                 </span>
               )}
             </span>

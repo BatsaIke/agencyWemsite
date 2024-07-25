@@ -1,88 +1,87 @@
 .team__content {
     text-align: center;
     margin-bottom: 50px;
-  }
-  
-  .our__team {
+}
+
+.our__team {
     padding: 0px;
-  }
-  
-  .team__item {
+}
+
+.team__item {
     background: var(--team-card-bg);
     border-radius: 5px;
-  }
-  
-  .team__img {
+}
+
+.team__img {
     width: 100%;
     height: 200px;
     border-radius: 5px;
     background: white;
     overflow: hidden;
-  }
-  
-  .team__img img {
+    display: flex; /* Add flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.team__img img {
     width: 100px;
     height: 200px;
     object-fit: contain;
-    transform: scale(1.4);
-    margin-left: 30%;
-  }
-  
-  .team__details {
+    transform: scale(1);
+}
+
+.team__details {
     padding: 20px 15px;
-  }
-  
-  .team__details h4 {
+}
+
+.team__details h4 {
     color: var(--primary-color);
     font-weight: 500;
     font-size: 1.2rem;
     margin-bottom: 0.4rem;
-  }
-  
-  .team__member-social {
+}
+
+.team__member-social {
     display: flex;
     align-items: center;
     column-gap: 1.4rem;
     margin-top: 10px;
-  }
-  
-  .team__member-social span i {
+}
+
+.team__member-social span i {
     padding: 5px;
     color: white;
     border-radius: 3px;
-  }
-  
-  .team__team-wrapper {
+}
+
+.team__team-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
     padding: 20px;
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
     .team__img img {
-      margin-left: auto;
-      margin-right: auto;
-      transform: scale(1);
+        transform: scale(1); /* Adjust scale */
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .team__content h2 {
-      font-size: 1.5rem;
+        font-size: 1.5rem;
     }
-  
+
     .team__details h4 {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  
+
     .team__details {
-      padding: 15px 10px;
+        padding: 15px 10px;
     }
-  
+
     .team__member-social span i {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  }
-  
+}

@@ -3,57 +3,62 @@
     width: 100%;
     height: 80px;
     line-height: 80px;
-}
-
-.nav__wrapper {
+  }
+  
+  .nav__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.menu {
+  }
+  
+  .menu {
     display: flex;
     align-items: center;
     column-gap: 2.7rem;
     list-style: none; 
-}
-
-.menu__link {
+  }
+  
+  .menu__link {
     font-weight: 400;
     font-size: 0.9rem;
     cursor: pointer;
-}
-
-.menu__link:hover {
+  }
+  
+  .menu__link:hover {
     color: var(--link-active);
-}
-
-.logo {
+  }
+  
+  .logo {
     display: flex;
     align-items: center;
-}
-
-.logo img {
+  }
+  
+  .logo img {
     height: 40px; /* Adjust the size of the logo */
     width: auto;  /* Maintain aspect ratio */
-}
-
-.light__mode span {
+  }
+  
+  .logo h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem; /* Adjust this if needed */
+  }
+  
+  .light__mode span {
     color: #fff;
     display: flex;
     align-items: center;
     column-gap: 0.3rem;
     font-size: 0.8rem;
     cursor: pointer;
-}
-
-.light-theme .light__mode span {
+  }
+  
+  .light-theme .light__mode span {
     color: #000;
     font-weight: 500;
     cursor: pointer;
-}
-
-.header__shrink {
+  }
+  
+  .header__shrink {
     width: 100%;
     height: 80px;
     line-height: 80px;
@@ -62,42 +67,69 @@
     left: 0;
     z-index: 9999;
     background: #0c123d;
-}
-
-.light-theme .header__shrink {
+  }
+  
+  .light-theme .header__shrink {
     background: #e3e5f3;
     box-shadow: 2px 2px 2px;
-}
+  }
+  
 
-/* Hamburger menu styles */
-.hamburger-icon {
-    display: block;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
 
-.light-theme .hamburger-icon {
-    color: #000; /* Color for light mode */
-}
 
-.dark-theme .hamburger-icon {
-    color: #fff; /* Color for dark mode */
-}
-
-/* Responsive styles */
-
-/* For tablets and above */
-@media only screen and (min-width: 768px) {
-    .menu {
-        column-gap: 2rem;
+  
+@media only screen and (max-width: 767px) {
+    .nav__wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    .menu__link {
-        font-size: 1rem;
+    .menu {
+        display: none; /* Hide the menu on mobile by default */
+    }
+
+    .logo {
+        order: 2;
+        margin-right: 10px; /* Adjust spacing as needed */
+    }
+
+    .light__mode {
+        order: 3;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        order: 1;
+        font-size: 1.5rem;
+        color: #fff; /* White color for dark mode */
+        cursor: pointer;
+    }
+
+    .dark-theme .hamburger {
+        color: #fff; /* White color */
+    }
+
+    .light-theme .hamburger {
+        color: #000; /* Dark color */
+    }
+
+    .hamburger.active + .mobile-menu {
+        display: block; /* Show the menu when hamburger is clicked */
+    }
+
+    .logo img {
+        height: 30px; /* Adjust the size of the logo on mobile */
+        width: auto;  /* Maintain aspect ratio */
+    }
+
+    .logo h2 {
+        font-size: 1.2rem; /* Adjust this if needed */
     }
 
     .light__mode span {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 
@@ -118,51 +150,5 @@
 
     .light__mode span {
         font-size: 0.9rem;
-    }
-}
-
-/* For mobile screens */
-@media only screen and (max-width: 767px) {
-    .nav__wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: column;
-        row-gap: 1rem;
-        align-items: flex-start;
-        transition: max-height 0.3s ease-out;
-        max-height: 0;
-        overflow: hidden;
-    }
-
-    .navigation.open .menu {
-        max-height: 300px; /* Adjust as needed */
-    }
-
-    .menu__link {
-        font-size: 1rem;
-    }
-
-    .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo img {
-        height: 30px; /* Adjust the size of the logo on mobile */
-        width: auto;  /* Maintain aspect ratio */
-    }
-
-    .light__mode span {
-        font-size: 1rem;
-    }
-
-    .header__shrink {
-        height: auto;
-        line-height: normal;
     }
 }

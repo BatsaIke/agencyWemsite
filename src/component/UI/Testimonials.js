@@ -1,5 +1,4 @@
 import React from "react";
-
 import "../../styles/testimonials.css";
 import ava01 from "../../images/ava-1.jpg";
 import ava02 from "../../images/ava-2.jpg";
@@ -13,10 +12,11 @@ const Testimonials = () => {
     autoplay: true,
     autoplaySpeed: 4000,
     speed: 1000,
-    slidesShow: 1,
-    sledesTOScrool: 1,
-    swipeTOSLide: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipeToSlide: true,
   };
+
   return (
     <section>
       <div className='container'>
@@ -32,57 +32,45 @@ const Testimonials = () => {
             {/* FIRST SLIDER */}
             <div className='slider__item'>
               <p className='description'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Adipisci harum, nemo debitis, libero dolorum accusamus earum ut
-                quidem eos recusandae commodi impedit natus corrupti iusto.
-                Eveniet voluptatem tempore, sint ratione odio et harum quod
-                ducimus deserunt non est, maiores dolor.
+                "Working with Techfix was a game-changer for our business. Their expertise in digital marketing and web development helped us achieve a significant increase in online engagement and sales."
               </p>
               <div className='customer__details'>
                 <div className='customer__img'>
-                  <img src={ava01} alt={ava01} />
+                  <img src={ava01} alt='John Doe' />
                 </div>
                 <div>
-                  <h5 className='customer__name'>John Doe</h5>
-                  <p className='description'>CEO, Walkintop</p>
+                  <h5 className='customer__name'>Jane Smith</h5>
+                  <p className='description'>Founder & CEO, Innovate Co.</p>
                 </div>
               </div>
             </div>
             {/* SECOND SLIDER */}
             <div className='slider__item'>
               <p className='description'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Adipisci harum, nemo debitis, libero dolorum accusamus earum ut
-                quidem eos recusandae commodi impedit natus corrupti iusto.
-                Eveniet voluptatem tempore, sint ratione odio et harum quod
-                ducimus deserunt non est, maiores dolor.
+                "The team at Techfix exceeded our expectations with their innovative solutions and excellent customer support. Our website looks fantastic and performs flawlessly."
               </p>
               <div className='customer__details'>
                 <div className='customer__img'>
-                  <img src={ava02} alt={ava02} />
+                  <img src={ava02} alt='Michael Johnson' />
                 </div>
                 <div>
-                  <h5 className='customer__name'>Sissi Deo</h5>
-                  <p className='description'>GM, TC Holdings</p>
+                  <h5 className='customer__name'>Michael Johnson</h5>
+                  <p className='description'>Marketing Director, TechWave</p>
                 </div>
               </div>
             </div>
-            {/* THORD SLIDER */}
+            {/* THIRD SLIDER */}
             <div className='slider__item'>
               <p className='description'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Adipisci harum, nemo debitis, libero dolorum accusamus earum ut
-                quidem eos recusandae commodi impedit natus corrupti iusto.
-                Eveniet voluptatem tempore, sint ratione odio et harum quod
-                ducimus deserunt non est, maiores dolor.
+                "Techfix's attention to detail and commitment to delivering high-quality results have been instrumental in our company's growth. Highly recommend their services."
               </p>
               <div className='customer__details'>
                 <div className='customer__img'>
-                  <img src={ava03} alt='ava03' />
+                  <img src={ava03} alt='Sarah Lee' />
                 </div>
                 <div>
-                  <h5 className='customer__name'>Ogboo Nana</h5>
-                  <p className='description'>Researc, Pantang</p>
+                  <h5 className='customer__name'>Sarah Lee</h5>
+                  <p className='description'>Product Manager, NextGen Solutions</p>
                 </div>
               </div>
             </div>
