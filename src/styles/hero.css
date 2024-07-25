@@ -1,113 +1,94 @@
 .hero__wrapper {
    display: flex;
-   align-items: center;
-   justify-content: flex-start; /* Align items to the start (left) */
-}
-
-.hero__content {
-   width: 70%; /* Increase content width to give it more space */
-   padding-right: 20px; /* Space between content and image */
-   box-sizing: border-box; /* Ensure padding is included in width calculation */
-}
-
-.hero__img {
-   width: 40%; /* Adjust image width as needed */
-   margin-left: auto; /* Push the image to the right */
-   box-sizing: border-box; /* Include margins in width calculation */
-   transform: translateX(10%); /* Move image further to the right */
-}
-
-.hero__content h2 {
+   justify-content: space-between;
+ }
+ 
+ .hero__content,
+ .hero__img {
+   width: 50%;
+ }
+ 
+ .hero__content h2 {
    font-size: 3rem;
    line-height: 65px;
-}
-
-.hero__content p {
+ }
+ 
+ .hero__content p {
    margin-top: 40px;
    font-size: 1.1rem;
-}
-
-.hero__btns {
+ }
+ 
+ .hero__content {
+   padding-top: 40px;
+ }
+ 
+ .highlight {
+   color: var(--primary-color);
+ }
+ 
+ .hero__btns {
    margin-top: 40px;
    display: flex;
    align-items: center;
    column-gap: 2rem;
-}
-
-.primary__btn,
-.secondary__btn {
+ }
+ 
+ .primary__btn,
+ .secondary__btn {
    padding: 0.8rem 1.5rem;
    border: none;
    outline: none;
    color: aliceblue;
    border-radius: 0.4rem;
    cursor: pointer;
-}
-
-.primary__btn {
+ }
+ 
+ .primary__btn {
    background-color: var(--btn-secondary-bg);
    border: 1px solid var(--btn-primary-bg);
-}
-
-.secondary__btn {
+ }
+ 
+ .secondary__btn {
    background-color: var(--btn-primary-bg);
    border: 1px solid var(--btn-secondary-bg);
-}
-
-.hero__img img {
+ }
+ 
+ .hero__img img {
    width: 100%;
-}
-
-/* Responsive styles for tablets and smaller screens */
-@media only screen and (max-width: 1024px) {
+ }
+ 
+ /* Media Queries for Mobile Responsiveness */
+ @media (max-width: 768px) {
    .hero__wrapper {
-       flex-direction: column; /* Stack vertically on smaller screens */
-       align-items: center; /* Center align items */
-       text-align: center; /* Center align text */
+     flex-direction: column;
+     align-items: center;
    }
-
+ 
    .hero__content,
    .hero__img {
-       width: 100%; /* Full width on smaller screens */
-       transform: none; /* Remove horizontal movement */
+     width: 100%;
    }
-
-   .hero__content {
-       padding-right: 0; /* Remove right padding on smaller screens */
-   }
-
-   .hero__img {
-       margin-left: 0; /* Remove margin on smaller screens */
-   }
-
-   .hero__content h2 {
-       font-size: 2.5rem; /* Adjust font size for smaller screens */
-       line-height: 50px; /* Adjust line height for smaller screens */
-   }
-
-   .hero__content p {
-       font-size: 1rem; /* Adjust font size for smaller screens */
-   }
-
+ 
    .hero__btns {
-       flex-direction: column; /* Stack buttons vertically */
-       align-items: center; /* Center align buttons */
-       column-gap: 1rem; /* Adjust space between buttons */
+     flex-direction: column;
+     row-gap: 1rem;
    }
-}
-
-/* Further adjustments for mobile screens */
-@media only screen and (max-width: 768px) {
+ }
+ 
+ @media (max-width: 480px) {
    .hero__content h2 {
-       font-size: 2rem; /* Further adjust font size for mobile screens */
-       line-height: 40px; /* Further adjust line height */
+     font-size: 2rem;
+     line-height: 45px;
    }
-
+ 
    .hero__content p {
-       font-size: 0.9rem; /* Further adjust font size for mobile screens */
+     font-size: 1rem;
    }
-
-   .hero__btns {
-       column-gap: 0.8rem; /* Reduce space between buttons */
+ 
+   .primary__btn,
+   .secondary__btn {
+     width: 100%;
+     padding: 0.8rem 1rem;
    }
-}
+ }
+ 
