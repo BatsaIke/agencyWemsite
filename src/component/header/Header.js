@@ -1,5 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./header.css";
+import logo from "../../images/Techfix_Logo_Blue.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun, faBars } from '@fortawesome/free-solid-svg-icons';
 
 const nav_links = [
   {
@@ -25,6 +28,7 @@ const nav_links = [
 ];
 
 const Header = ({ theme, toggleTheme }) => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const headerRef = useRef(null);
 
   const headerFunt = () => {
@@ -37,6 +41,7 @@ const Header = ({ theme, toggleTheme }) => {
       headerRef.current.classList.remove("header__shrink");
     }
   };
+
   useEffect(() => {
     window.addEventListener("scroll", headerFunt);
     return () => window.removeEventListener("scroll", headerFunt);
@@ -44,31 +49,33 @@ const Header = ({ theme, toggleTheme }) => {
 
   const handleClick = (e) => {
     e.preventDefault();
-
     const targetAttr = e.target.getAttribute("href");
     const location = document.querySelector(targetAttr).offsetTop;
-
     window.scrollTo({
       left: 0,
       top: location - 80,
     });
   };
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
-    <header className='header' ref={headerRef}>
+    <header className={`header ${theme}`}>
       <div className='container'>
         <div className='nav__wrapper'>
           <div className='logo'>
-            <h2>Digency</h2>
-            {/* <p>Grow with us</p> */}
+            <img src={logo} alt="Logo" />
           </div>
+          {/* Mobile hamburger icon */}
+          <FontAwesomeIcon icon={faBars} className="hamburger-icon" onClick={toggleNav} />
           {/* =========navigation =======*/}
-          <div className='navigation'>
+          <div className={`navigation ${isNavOpen ? 'open' : ''}`}>
             <ul className='menu'>
               {nav_links.map((item, index) => (
                 <li className='menu_item' key={index}>
-                  <a href={item.path} 
-                  onClick={handleClick}
-                  className='menu__link'>
+                  <a href={item.path} onClick={handleClick} className='menu__link'>
                     {item.display}
                   </a>
                 </li>
@@ -80,11 +87,11 @@ const Header = ({ theme, toggleTheme }) => {
             <span onClick={toggleTheme}>
               {theme === "light-theme" ? (
                 <span>
-                  <i class='ri-moon-line'></i>Dark Mode
+                  <FontAwesomeIcon icon={faMoon} /> Dark Mode
                 </span>
               ) : (
                 <span>
-                  <i class='ri-sun-line'> </i>Light Mode
+                  <FontAwesomeIcon icon={faSun} /> Light Mode
                 </span>
               )}
             </span>

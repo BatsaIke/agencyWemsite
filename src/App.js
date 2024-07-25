@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { Footer } from './component/Footer.js';
-import Header from './component/Header.js';
 import AboutMe from './component/UI/AboutMe.js';
 import Blog from './component/UI/Blog.js';
 import Counter from './component/UI/Counter.js';
@@ -11,6 +10,7 @@ import NewsLetter from './component/UI/NewsLetter.js';
 import Services from './component/UI/Services.js';
 import Team from './component/UI/Team.js';
 import Testimonials from './component/UI/Testimonials.js';
+import Header from './component/header/Header.js';
 
 function App() {
 const [theme, setTheme]=useState('')

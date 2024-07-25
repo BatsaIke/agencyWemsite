@@ -1,53 +1,74 @@
- .services__top-content{
-    text-align: center;
-    margin-bottom: 40px;
-    align-items: center;
-    justify-content: center;
- }
+.services__top-content {
+   text-align: center;
+   margin-bottom: 40px;
+   align-items: center;
+   justify-content: center;
+}
+.description{
+   font-size: 1.0rem;
+}
+.services__item {
+   background: var(--card-bg);
+   width: 300px; /* Increased default width */
+   padding: 30px 15px;
+   text-align: center;
+   border-radius: .5rem;
+}
 
- .services__item{
-    background: var(--card-bg);
-    width: 250px;
-    padding: 30px 15px;
-    text-align: center;
-    border-radius: .5rem;
- }
-
- .service__icon{
-   width: 60px;
-   height: 60px;
+.service__icon {
+   width: 70px; /* Increased icon size */
+   height: 70px; /* Increased icon size */
    display: flex;
    align-items: center;
    justify-content: center;
    margin: auto; 
    background: var(--icon-bg);
    border-radius: .5rem;
-   margin-bottom: 50px;
-   border: 2px solid var(--primary-color) ;
- }
+   margin-bottom: 30px; /* Adjusted margin */
+   border: 2px solid var(--primary-color);
+}
 
- .light-theme .service__icon{
+.light-theme .service__icon {
    background-color: var(--primary-color);
- }
+}
 
- .light-theme .service__icon i{
-  color: aliceblue;
-  
- }
+.light-theme .service__icon i {
+   color: aliceblue;
+}
 
- .service__icon i{
-font-size:2rem ;
-color: var(--primary-color);
- }
- .service__title{
-    color: var(--primary-color);
-    font-size: 1.0rem;
-    margin-bottom: 30px;
- }
+.service__icon i {
+   font-size: 2.5rem; /* Increased font size */
+   color: var(--primary-color);
+}
 
- .service__item-wrapper{
-    display: flex;
-    column-gap: 2rem;
-    align-items: center;
-    justify-content: center;
- }
+.service__title {
+   color: var(--primary-color);
+   font-size: 1.2rem; /* Increased font size */
+   margin-bottom: 30px;
+}
+
+.service__item-wrapper {
+   display: flex;
+   flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+   gap: 2rem; /* Adjust space between items */
+   justify-content: center;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 1200px) {
+   .service__item {
+       width: 40%; /* Increased width for 3 items per row */
+   }
+}
+
+@media only screen and (max-width: 992px) {
+   .service__item {
+       width: 55%; /* Increased width for 2 items per row */
+   }
+}
+
+@media only screen and (max-width: 768px) {
+   .service__item {
+       width: 100%; /* Full width for 1 item per row */
+   }
+}

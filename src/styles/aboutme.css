@@ -53,3 +53,40 @@ margin-top: 3opx;
 .light-theme .choose__us-title{
     color: #0c123d !important;
 } 
+
+@media only screen and (max-width: 1200px) {
+    .about__content,
+    .about__img {
+        width: 100%; /* Stack content and image vertically on smaller screens */
+    }
+
+    .about__img img {
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about__wrapper {
+        flex-direction: column; /* Stack content and image vertically on mobile screens */
+        align-items: center;
+    }
+
+    .about__content {
+        order: 1; /* Ensure content comes before the image */
+    }
+
+    .about__img {
+        order: 2; /* Ensure image comes after the content */
+        margin-top: 20px; /* Add space between content and image */
+    }
+
+    .choose_us-item {
+        padding: 10px; /* Further adjust padding */
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center align text */
+    }
+
+    .choose__us-icon {
+        margin-bottom: 10px; /* Add margin between icon and text */
+    }
+}

@@ -22,3 +22,34 @@
 .counter__title{
     font-size: 1.5rem;
 }
+
+/* Responsive styles for tablets and smaller screens */
+@media only screen and (max-width: 1024px) {
+    .counter__item {
+        width: 50%; /* Two items per row on tablets */
+    }
+
+    .counter__number {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .counter__title {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Further adjustments for mobile screens */
+@media only screen and (max-width: 768px) {
+    .counter__item {
+        width: 100%; /* Full width on mobile screens */
+        margin-bottom: 20px; /* Add margin between items */
+    }
+
+    .counter__number {
+        font-size: 1.8rem; /* Further adjust font size for mobile screens */
+    }
+
+    .counter__title {
+        font-size: 1rem; /* Further adjust font size for mobile screens */
+    }
+}

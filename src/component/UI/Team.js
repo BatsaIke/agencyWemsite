@@ -1,7 +1,7 @@
 import React from "react";
-import '../../styles/team.css'
+import "../../styles/team.css";
 
-import team1 from '../../images/team-01.png'
+import team1 from "../../images/team-01.png";
 import team2 from "../../images/team-02.png";
 import team3 from "../../images/team-03.png";
 import team4 from "../../images/team-04.png";
@@ -13,31 +13,30 @@ const teamMembers = [
     id: 1,
     name: "Country Hurry",
     position: "Product Developer",
-    imageUrl: team1
+    imageUrl: team1,
   },
   {
     id: 2,
     name: "Boss Chan",
     position: "App Developer",
     imageUrl: team2,
-    
   },
   {
     id: 3,
     name: "Soldier Man",
-    position: "App Deverloper",
+    position: "App Developer",
     imageUrl: team3,
   },
   {
     id: 4,
     name: "Kodjo Turkey",
-    position: "Business developer",
+    position: "Business Developer",
     imageUrl: team4,
   },
   {
     id: 5,
     name: "Yo Yander",
-    position: "Same to you",
+    position: "Same to You",
     imageUrl: team5,
   },
   {
@@ -69,10 +68,10 @@ const Team = () => {
                 <p className='description'>{item.position}</p>
                 <div className='team__member-social'>
                   <span>
-                    <i class='ri-linkedin-line'></i>
+                    <i className='ri-linkedin-line'></i>
                   </span>
                   <span>
-                    <i class='ri-twitter-line'></i>
+                    <i className='ri-twitter-line'></i>
                   </span>
                 </div>
               </div>
