@@ -57,6 +57,37 @@
   --team-card-bg: #fff;
 }
 
+.dark-theme {
+  --body-bg: rgba(6, 11, 26, 1);
+  --heading-color: #fff;
+  --btn-primary-bg: #379cf6;
+  --btn-secondary-bg: #090238;
+  --primary-color: #379cf6;
+  --counter-color: linear-gradient(
+    90deg,
+    #02bba6 30%,
+    rgba(29, 129, 176, 1) 55%,
+    rgba(35, 93, 173, 1) 75%
+  );
+  --link-color: #fff;
+  --link-active: #379cf6;
+  --newsletter-bg: linear-gradient(
+    90deg,
+    rgba(27, 9, 115, 1) 20%,
+    rgba(23, 9, 96, 1) 38%,
+    rgba(14, 9, 56, 1) 100%
+  );
+  --small-text-color: rgba(255, 255, 255, 0.774);
+  --card-bg: linear-gradient(
+    45deg,
+    rgba(15, 18, 61, 1) 33%,
+    rgba(15, 18, 61, 1) 52%,
+    rgba(11, 41, 69, 1) 84%
+  );
+  --testimonial-bg: #1a0f4f;
+  --team-card-bg: #1b2352;
+}
+
 /* Global Styles */
 * {
   padding: 0;

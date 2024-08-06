@@ -46,9 +46,11 @@ const clients = [
   },
 ];
 
-const Clients = () => {
+const Clients = ({ theme }) => {
+  const isDarkTheme = theme === '' || theme === 'dark-theme';
+
   return (
-    <section className='clients'>
+    <section className={`clients ${isDarkTheme ? 'dark-theme' : ''}`}>
       <div className='container'>
         <h2 className='clients__title'>Our Clients</h2>
         <p className='clients__description'>
