@@ -17,14 +17,14 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Boss Chan",
-    position: "App Developer",
+    name: "Yao Nyanui",
+    position: "Creatives Design",
     imageUrl: team2,
   },
   {
     id: 3,
-    name: "Soldier Man",
-    position: "App Developer",
+    name: "Timoty Tulasi",
+    position: "Project Manager",
     imageUrl: team3,
   },
   {
