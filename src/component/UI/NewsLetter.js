@@ -1,5 +1,4 @@
 import React from "react";
-
 import "../../styles/newsletter.css";
 
 const NewsLetter = () => {
@@ -8,15 +7,14 @@ const NewsLetter = () => {
       <div className='container'>
         <div className='newsletter__wrapper'>
           <div className='newsletter__content'>
-            <h6 className='subtitle'>Let's work</h6>
+            <h6 className='subtitle'>Stay Updated</h6>
             <h2>
-              Explore the <span className='highlight'>Hidden</span> ideas and
-              subscribe
+              Uncover the <span className='highlight'>Latest Innovations</span> by Subscribing
             </h2>
           </div>
           <div className='newsletter__form'>
-            <input type='email' placeholder="Email"/>
-            <button className="secondary__btn subscribe__btn">Suscribe now</button>
+            <input type='email' placeholder="Enter your email" />
+            <button className="secondary__btn subscribe__btn">Subscribe Now</button>
           </div>
         </div>
       </div>

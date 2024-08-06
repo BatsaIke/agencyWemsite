@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import './App.css';
 import { Footer } from './component/Footer.js';
@@ -11,30 +10,32 @@ import Services from './component/UI/Services.js';
 import Team from './component/UI/Team.js';
 import Testimonials from './component/UI/Testimonials.js';
 import Header from './component/header/Header.js';
+import Clients from './component/UI/Clients.js';
 
 function App() {
-const [theme, setTheme]=useState('')
+  const [theme, setTheme] = useState('light-theme');
 
-const toggleTheme =()=>{
-  theme ==='' ? setTheme('light-theme'): setTheme('')
-}
+  const toggleTheme = () => {
+    setTheme(prevTheme => prevTheme === 'light-theme' ? 'dark-theme' : 'light-theme');
+  };
 
-useEffect(()=>{
-document.body.className= theme
-},[theme])
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   return (
     <>
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <Hero  theme={theme} />
-      <Counter/>
-      <Services/>
-      <AboutMe/>
-      <Team/>
-      <Blog/>
-      <Testimonials/>
-      <NewsLetter/>
-      <Footer/>
+      <Hero theme={theme} />
+      <Counter />
+      <Services />
+      <AboutMe />
+      <Clients />
+      <Team />
+      <Blog />
+      <Testimonials />
+      <NewsLetter />
+      <Footer />
     </>
   );
 }

@@ -1,5 +1,6 @@
 .newsletter {
     background: var(--newsletter-bg);
+    padding: 2rem 1rem;
 }
 
 .newsletter__wrapper {
@@ -20,6 +21,7 @@
     outline: none;
     font-size: 1rem;
     cursor: pointer;
+    flex: 1;
 }
 
 .newsletter__form {
@@ -29,10 +31,19 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 0.5rem;
+    width: 100%;
 }
 
-.hero__img {
-    width: 100%;
+.newsletter__form button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
 }
 
 .light-theme .newsletter {
@@ -56,5 +67,17 @@
 
     .newsletter__content {
         margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .newsletter__form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .newsletter__form button {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
     }
 }

@@ -1,7 +1,7 @@
 import React from "react";
-
 import "../../src/styles/footer.css";
-const quikLinks01 = [
+
+const quickLinks01 = [
   {
     id: 1,
     path: "#",
@@ -19,7 +19,7 @@ const quikLinks01 = [
   },
 ];
 
-const quikLinks02 = [
+const quickLinks02 = [
   {
     id: 1,
     path: "#",
@@ -37,16 +37,16 @@ const quikLinks02 = [
   },
 ];
 
-const quikLinks03 = [
+const quickLinks03 = [
   {
     id: 1,
-    path: "#abount",
+    path: "#about",
     display: "About",
   },
   {
     id: 2,
-    path: "#job",
-    display: "Job",
+    path: "#careers",
+    display: "Careers",
   },
   {
     id: 3,
@@ -54,27 +54,23 @@ const quikLinks03 = [
     display: "Blog",
   },
 ];
+
 export const Footer = () => {
-    // const date= new Date().getFullYear().toLocaleString()
   return (
     <footer className='footer'>
       <div className='container'>
         <div className='footer__wrapper'>
           <div className='footer__logo'>
-            <h2>Digency</h2>
-            <p className='description'>Grow with us</p>
+            <h2>TechFix</h2>
+            <p className='description'>Empowering Your Digital Journey</p>
             <p className='small__text description'>
-              {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-              nesciunt enim sunt aliquid, libero hic repellendus. Nisi quae
-              nostrum vero aut doloribus illum quidem quas beatae labore, ipsam
-              aliquam suscipit.
+              Join us to explore the latest in technology and innovation. At TechFix, we are committed to delivering exceptional services that drive your business forward.
             </p>
           </div>
           <div className='footer__quick-links'>
             <h3 className='quick__links-title'>Solutions</h3>
             <ul className='quick__links'>
-              {quikLinks01.map((itm) => (
+              {quickLinks01.map((itm) => (
                 <li className='quick__link-item' key={itm.id}>
                   <a href={itm.path}>{itm.display}</a>
                 </li>
@@ -85,7 +81,7 @@ export const Footer = () => {
           <div className='footer__quick-links'>
             <h3 className='quick__links-title'>Company</h3>
             <ul className='quick__links'>
-              {quikLinks02.map((itm) => (
+              {quickLinks02.map((itm) => (
                 <li className='quick__link-item' key={itm.id}>
                   <a href={itm.path}>{itm.display}</a>
                 </li>
@@ -96,14 +92,13 @@ export const Footer = () => {
           <div className='footer__quick-links'>
             <h3 className='quick__links-title'>Support</h3>
             <ul className='quick__links'>
-              {quikLinks03.map((itm) => (
+              {quickLinks03.map((itm) => (
                 <li className='quick__link-item' key={itm.id}>
                   <a href={itm.path}>{itm.display}</a>
                 </li>
               ))}
             </ul>
           </div>
-          
         </div>
       </div>
     </footer>

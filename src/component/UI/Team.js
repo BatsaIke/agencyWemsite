@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/team.css";
 
-import team1 from "../../images/team-01.png";
+import team1 from "../../images/batsa.jpg";
 import team2 from "../../images/team-02.png";
 import team3 from "../../images/team-03.png";
 import team4 from "../../images/team-04.png";
@@ -11,8 +11,8 @@ import team6 from "../../images/team-03.png";
 const teamMembers = [
   {
     id: 1,
-    name: "Country Hurry",
-    position: "Product Developer",
+    name: "Batsa Isaac",
+    position: "Software Engineer",
     imageUrl: team1,
   },
   {

@@ -1,0 +1,87 @@
+.clients {
+    padding: 2rem 0;
+    background: var(--background-color);
+    text-align: center;
+}
+
+.clients__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.clients__description {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clients__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.client__card {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--card-background);
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.client__card:hover {
+    transform: scale(1.05);
+}
+
+.client__logo {
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.client__name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+/* Define light theme variables */
+.light-theme {
+    --background-color: #f0f4f8;
+    --primary-color: #333;
+    --text-color: #333;
+    --card-background: #fff;
+}
+
+/* Define dark theme variables */
+.dark-theme {
+    --background-color: #333;
+    --primary-color: #fff;
+    --text-color: #fff;
+    --card-background: #444;
+}
+
+@media only screen and (max-width: 768px) {
+    .clients__grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .client__card {
+        width: 100%;
+    }
+}
