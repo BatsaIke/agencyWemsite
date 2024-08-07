@@ -15,7 +15,7 @@
 
 /* Dark Theme Styles */
 .clients {
-    background: #333;
+    background: var(--card-bg);
 }
 
 .clients__title,
@@ -25,11 +25,11 @@
 }
 
 .client__card {
-    background-color: #444;
+    background-color: #17075ee2;
 }
 
 .client__card:hover {
-    background-color: #555; /* Optional: Change hover effect for dark mode */
+    background-color: #616196; /* Optional: Change hover effect for dark mode */
 }
 
 /* Common Styles */

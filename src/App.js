@@ -29,9 +29,9 @@ document.body.className= theme
       <Header theme={theme} toggleTheme={toggleTheme} />
       <Hero  theme={theme} />
       <Counter/>
+      <Clients/>
       <Services/>
       <AboutMe/>
-      <Clients/>
       <Team/>
       <Blog/>
       <Testimonials/>
