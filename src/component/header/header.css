@@ -71,6 +71,8 @@
   
   .light-theme .header__shrink {
     background: #ffffff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+
   }
   
 
