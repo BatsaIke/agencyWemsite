@@ -58,11 +58,11 @@
 }
 
 .dark-theme {
-  --body-bg: rgba(6, 11, 26, 1);
+  --body-bg: #4D4D4D;
   --heading-color: #fff;
-  --btn-primary-bg: #379cf6;
+  --btn-primary-bg: #009DC4;
   --btn-secondary-bg: #090238;
-  --primary-color: #379cf6;
+  --primary-color: #009DC4;
   --counter-color: linear-gradient(
     90deg,
     #02bba6 30%,
