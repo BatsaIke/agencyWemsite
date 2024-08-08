@@ -33,18 +33,18 @@ const teamMembers = [
     position: "Digital Marketer",
     imageUrl: team6,
   },
-  {
-    id: 4,
-    name: "Josephine Gyabaah",
-    position: "Social Media Manager",
-    imageUrl: team4,
-  },
-  {
-    id: 5,
-    name: "Dwamena Margaret",
-    position: "UX/UI",
-    imageUrl: team5,
-  },
+  // {
+  //   id: 4,
+  //   name: "Josephine Gyabaah",
+  //   position: "Social Media Manager",
+  //   imageUrl: team4,
+  // },
+  // {
+  //   id: 5,
+  //   name: "Dwamena Margaret",
+  //   position: "UX/UI",
+  //   imageUrl: team5,
+  // },
  
 ];
 
