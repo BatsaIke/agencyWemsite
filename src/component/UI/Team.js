@@ -17,7 +17,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Yao Nyanui",
+    name: "Yao Nyanyuie Loh",
     position: "Creatives Design",
     imageUrl: team2,
   },
