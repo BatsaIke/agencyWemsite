@@ -38,11 +38,11 @@
 .light-theme {
   --body-bg: rgb(255, 255, 255);
   --heading-color: #0c123d;
-  --btn-secondary-bg: #816aff;
+  --btn-secondary-bg: #009DC4;
   --btn-primary-bg: #fff;
-  --primary-color: #816aff;
+  --primary-color: #009DC4;
   --counter-color: #fff;
-  --counter-section-bg: #816aff;
+  --counter-section-bg: #009DC4;
   --link-color: #0c123d;
   --link-active: #816aff;
   --newsletter-bg: linear-gradient(
