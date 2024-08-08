@@ -28,23 +28,24 @@ const teamMembers = [
     imageUrl: team3,
   },
   {
+    id: 6,
+    name: "Sam John",
+    position: "Digital Marketer",
+    imageUrl: team6,
+  },
+  {
     id: 4,
-    name: "Georgina Damalie",
+    name: "Josephine Gyabaah",
     position: "Social Media Manager",
     imageUrl: team4,
   },
   {
     id: 5,
-    name: "Yo Yander",
-    position: "Same to You",
+    name: "Dwamena Margaret",
+    position: "UX/UI",
     imageUrl: team5,
   },
-  {
-    id: 6,
-    name: "Sam John",
-    position: "Boss",
-    imageUrl: team6,
-  },
+ 
 ];
 
 const Team = () => {
