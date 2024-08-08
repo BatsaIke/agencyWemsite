@@ -2,8 +2,8 @@ import React from "react";
 import "../../styles/team.css";
 
 import team1 from "../../images/batsa.jpg";
-import team2 from "../../images/team-02.png";
-import team3 from "../../images/team-03.png";
+import team2 from "../../images/Yao.jpg";
+import team3 from "../../images/Timothy.jpg";
 import team4 from "../../images/team-04.png";
 import team5 from "../../images/team-01.png";
 import team6 from "../../images/team-03.png";
@@ -29,8 +29,8 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Kodjo Turkey",
-    position: "Business Developer",
+    name: "Georgina Damalie",
+    position: "Social Media Manager",
     imageUrl: team4,
   },
   {
