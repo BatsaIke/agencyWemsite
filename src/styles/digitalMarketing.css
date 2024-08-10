@@ -1,0 +1,149 @@
+/* Light Theme Styles */
+.light-theme .digital-marketing .digital-marketing__plan {
+    background: #f8f9fa;
+}
+
+.light-theme .digital-marketing__title,
+.light-theme .digital-marketing__intro,
+.light-theme .digital-marketing__card-title {
+    color: #009DC4;
+}
+.light-theme .digital-marketing__plan-services{
+    color:  #4D4D4D;
+}
+.light-theme .digital-marketing__card  {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* Dark Theme Styles */
+.dark-theme .digital-marketing {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme .digital-marketing__title,
+.dark-theme .digital-marketing__intro {
+    color: #e0e0e0;
+}
+
+
+.dark-theme .digital-marketing__card-title  {
+    color: #009DC4;
+}
+
+
+.dark-theme .digital-marketing__card {
+    background-color: #4D4D4D;
+    border: 1px solid #444;
+}
+
+.dark-theme .digital-marketing__card-description{
+    color: #e0e0e0;
+
+}
+/* Common Styles */
+.digital-marketing {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.digital-marketing__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.digital-marketing__intro {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.digital-marketing__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.digital-marketing__card {
+    width: 300px;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.digital-marketing__card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.digital-marketing__card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.digital-marketing__card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Plan Styles */
+.digital-marketing__plans {
+    margin-top: 2rem;
+}
+
+.digital-marketing__plan {
+    background: #4D4D4D;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.digital-marketing__plan-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: inherit;
+    color: #009DC4;
+}
+
+.digital-marketing__plan-services {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.digital-marketing__plan-services li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .digital-marketing__grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .digital-marketing__card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .digital-marketing__title {
+        font-size: 2rem;
+    }
+
+    .digital-marketing__intro {
+        font-size: 1rem;
+    }
+}
