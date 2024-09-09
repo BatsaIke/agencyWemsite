@@ -25,8 +25,8 @@ const Hero = ({ theme }) => {
               Partner with us to develop cutting-edge mobile apps and digital platforms that enhance your brand's presence and drive success. Join us and experience a transformation in your digital journey.
             </p>
             <div className='hero__btns'>
-              <button className='primary__btn' onClick={handleGetStartedClick}>Get Started Now</button>
-              <button className='secondary__btn'>Discover More</button>
+              <button className='primary__btn' onClick={handleGetStartedClick}>Digital Marketing</button>
+              <button className='secondary__btn'>Software Engineering</button>
             </div>
           </div>
           <div className='hero__img'>

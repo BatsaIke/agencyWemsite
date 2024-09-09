@@ -14,6 +14,7 @@ import Header from './component/header/Header.js';
 import Clients from './component/UI/Clients.js';
 import DigitalMarketing from './component/UI/DigitalMarketing.js';
 import WhatsAppButton from './component/WhatsappButton/WhatsAppButton.js';
+import SoftwareEngineering from './component/UI/SoftwareEnginnering.js';
 
 function App() {
   const [theme, setTheme] = useState('');
@@ -32,6 +33,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home theme={theme} />} />
         <Route path="/digital-marketing" element={<DigitalMarketing theme={theme} />} />
+        <Route path="/software-engineering" element={<SoftwareEngineering theme={theme} />} />
+
       </Routes>
       <Footer />
       <WhatsAppButton />

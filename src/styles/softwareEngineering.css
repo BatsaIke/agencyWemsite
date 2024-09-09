@@ -1,0 +1,114 @@
+/* Light Theme Styles */
+.light-theme .software-engineering {
+    background: #f8f9fa;
+
+}
+
+.light-theme .software-engineering__title,
+.light-theme .software-engineering__intro,
+.light-theme .software-engineering__card-title {
+    color: #009DC4;
+}
+
+.light-theme .software-engineering__card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.light-theme .software-engineering__card-description {
+    color: #333;
+}
+
+/* Dark Theme Styles */
+.dark-theme .software-engineering {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme .software-engineering__title,
+.dark-theme .software-engineering__intro,
+.dark-theme .software-engineering__card-title {
+    color: #66CCFF;
+}
+
+.dark-theme .software-engineering__card {
+    background-color: #333;
+    border: 1px solid #444;
+}
+
+.dark-theme .software-engineering__card-description {
+    color: #e0e0e0;
+}
+
+/* Common Styles */
+.software-engineering {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.software-engineering__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.software-engineering__intro {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.software-engineering__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.software-engineering__card {
+    width: 300px;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.software-engineering__card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.software-engineering__card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.software-engineering__card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .software-engineering__grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .software-engineering__card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .software-engineering__title {
+        font-size: 2rem;
+    }
+
+    .software-engineering__intro {
+        font-size: 1rem;
+    }
+}
