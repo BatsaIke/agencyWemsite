@@ -13,6 +13,7 @@ import Testimonials from './component/UI/Testimonials.js';
 import Header from './component/header/Header.js';
 import Clients from './component/UI/Clients.js';
 import DigitalMarketing from './component/UI/DigitalMarketing.js';
+import WhatsAppButton from './component/WhatsappButton/WhatsAppButton.js';
 
 function App() {
   const [theme, setTheme] = useState('');
@@ -33,6 +34,8 @@ function App() {
         <Route path="/digital-marketing" element={<DigitalMarketing theme={theme} />} />
       </Routes>
       <Footer />
+      <WhatsAppButton />
+
     </Router>
   );
 }
