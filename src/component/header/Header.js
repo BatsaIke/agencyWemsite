@@ -51,13 +51,21 @@ const Header = ({ theme, toggleTheme }) => {
   const handleClick = (e) => {
     e.preventDefault();
     const targetAttr = e.target.getAttribute("href");
-    const location = document.querySelector(targetAttr).offsetTop;
-
-    window.scrollTo({
-      left: 0,
-      top: location - 80,
-    });
+  
+    if (window.location.pathname !== "/") {
+      // If not on the home page, navigate to the home route first
+      window.location.href = "/" + targetAttr; // Redirect to home with the target anchor
+    } else {
+      // If on the home page, perform scrolling to the target section
+      const location = document.querySelector(targetAttr).offsetTop;
+      window.scrollTo({
+        left: 0,
+        top: location - 80,
+        behavior: "smooth",
+      });
+    }
   };
+  
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
