@@ -15,6 +15,10 @@ const nav_links = [
     display: "About",
   },
   {
+    path: "#contact",
+    display: "Contact Us",
+  },
+  {
     path: "#service",
     display: "Services",
   },
@@ -53,10 +57,8 @@ const Header = ({ theme, toggleTheme }) => {
     const targetAttr = e.target.getAttribute("href");
   
     if (window.location.pathname !== "/") {
-      // If not on the home page, navigate to the home route first
-      window.location.href = "/" + targetAttr; // Redirect to home with the target anchor
+      window.location.href = "/" + targetAttr;
     } else {
-      // If on the home page, perform scrolling to the target section
       const location = document.querySelector(targetAttr).offsetTop;
       window.scrollTo({
         left: 0,
@@ -64,47 +66,61 @@ const Header = ({ theme, toggleTheme }) => {
         behavior: "smooth",
       });
     }
+
+    // Close the mobile menu after navigating
+    setMenuOpen(false);
   };
-  
 
   const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
+    setMenuOpen(!isMenuOpen); // Toggle mobile menu
   };
 
   return (
     <header className={`header ${theme}`} ref={headerRef}>
-      <div className='container'>
-        <div className='nav__wrapper'>
+      <div className="container">
+        <div className="nav__wrapper">
+         
+
           <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
             <FontAwesomeIcon icon={faBars} />
           </div>
-          <div className='logo'>
+
+          <div className="logo">
             <img src={theme === "light-theme" ? logolight : logo} alt="Logo" />
           </div>
+
           {/* Mobile Menu */}
-          <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
-            <ul className='menu'>
+          <div className={`mobile-menu ${theme} ${isMenuOpen ? 'open' : ''}`}>
+            <div className="mobile-logo">
+              <img src={theme === "light-theme" ? logolight : logolight} alt="Mobile Logo" />
+            </div>
+            {/* Contact Number below the logo (only for mobile) */}
+            {/* <div className="mobile-contact">
+              <a href="tel:+233543869957">+233543869957</a>
+            </div> */}
+            <ul className="menu">
               {nav_links.map((item, index) => (
-                <li className='menu_item' key={index}>
+                <li className="menu_item" key={index}>
                   <a href={item.path} 
-                  onClick={handleClick}
-                  className='menu__link'>
+                    onClick={handleClick}
+                    className="menu__link">
                     {item.display}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-          {/* ============light mode========== */}
-          <div className='light__mode'>
+
+          {/* Theme Toggle */}
+          <div className="light__mode">
             <span onClick={toggleTheme}>
               {theme === "light-theme" ? (
                 <span>
-                  <i className='ri-moon-line'></i>Dark Mode
+                  <i className="ri-moon-line"></i>Dark Mode
                 </span>
               ) : (
                 <span>
-                  <i className='ri-sun-line'></i>Light Mode
+                  <i className="ri-sun-line"></i>Light Mode
                 </span>
               )}
             </span>

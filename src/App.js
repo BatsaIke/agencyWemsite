@@ -15,6 +15,7 @@ import Clients from './component/UI/Clients.js';
 import DigitalMarketing from './component/UI/DigitalMarketing.js';
 import WhatsAppButton from './component/WhatsappButton/WhatsAppButton.js';
 import SoftwareEngineering from './component/UI/SoftwareEnginnering.js';
+import ContactUs from './component/UI/ContactUs.js';
 
 function App() {
   const [theme, setTheme] = useState('');
@@ -50,6 +51,7 @@ const Home = ({ theme }) => (
     <Clients />
     <Services />
     <AboutMe />
+    <ContactUs/>
     <Team />
     <Blog />
     <Testimonials />
